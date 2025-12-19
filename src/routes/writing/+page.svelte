@@ -1,7 +1,16 @@
+<script lang="ts">
+	let { data } = $props();
+</script>
+
 <svelte:head>
 	<title>Writing</title>
 </svelte:head>
 
-<h2>Writing</h2>
-
-<p>This is the writing page</p>
+<ul>
+	{#each data.posts as post}
+		<li>
+			<p><a href={post.path}>{post.meta.title}</a></p>
+			Published on {post.meta.date}
+		</li>
+	{/each}
+</ul>
