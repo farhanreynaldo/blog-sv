@@ -7,18 +7,25 @@
 </footer>
 
 <style>
+	ul,
+	li {
+		display: contents;
+	}
+
 	footer {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
 		margin-top: 2rem;
-		padding: 1rem 0;
-		border-top: 1px solid #ccc;
+	}
+
+	a {
+		text-decoration: none;
+		color: oklch(70% 0% 0);
 		text-align: center;
 	}
 
-	ul {
-		display: flex;
-		justify-content: center;
-		list-style: none;
-		padding: 0;
-		gap: 1rem;
+	a:hover {
+		color: oklch(10% 0% 0);
 	}
 </style>
