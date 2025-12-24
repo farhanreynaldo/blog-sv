@@ -1,5 +1,7 @@
 export async function load({ params }) {
-	const post = await import(`../${params.slug}.md`);
+	const posts = import.meta.glob('../*.{md,svx}');
+	const postPath = Object.keys(posts).find((path) => path.includes(`/${params.slug}`));
+	const post = await posts[postPath]();
 	const { title, date } = post.metadata;
 	const content = post.default;
 
