@@ -1,31 +1,22 @@
-<footer>
-	<ul>
-		<li><a href="mailto:farhanreynaldo@gmail.com">Email</a></li>
-		<li><a href="https://github.com/farhanreynaldo">GitHub</a></li>
-		<li><a href="https://linkedin.com/in/farhanreynaldo">LinkedIn</a></li>
-	</ul>
+<footer class="border-divider border-mt-auto border-t pt-4">
+	<nav class="flex justify-center gap-6 text-sm" aria-label="Social links">
+		<a
+			href="mailto:farhanreynaldo@gmail.com"
+			class="text-content-subtle hover:text-accent transition-colors duration-200"
+		>
+			Email
+		</a>
+		<a
+			href="https://github.com/farhanreynaldo"
+			class="text-content-subtle hover:text-accent transition-colors duration-200"
+		>
+			GitHub
+		</a>
+		<a
+			href="https://linkedin.com/in/farhanreynaldo"
+			class="text-content-subtle hover:text-accent transition-colors duration-200"
+		>
+			LinkedIn
+		</a>
+	</nav>
 </footer>
-
-<style>
-	ul,
-	li {
-		display: contents;
-	}
-
-	footer {
-		display: flex;
-		justify-content: center;
-		gap: 1rem;
-		margin-top: 2rem;
-	}
-
-	a {
-		text-decoration: none;
-		color: oklch(70% 0% 0);
-		text-align: center;
-	}
-
-	a:hover {
-		color: oklch(10% 0% 0);
-	}
-</style>

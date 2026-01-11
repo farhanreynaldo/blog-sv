@@ -2,43 +2,33 @@
 	import { page } from '$app/state';
 </script>
 
-<nav>
-	<ul>
-		<li><a class={page.url.pathname === '/' ? 'current' : ''} href="/">Home</a></li>
-		<li><a class={page.url.pathname === '/about' ? 'current' : ''} href="/about">About</a></li>
-		<li>
-			<a class={page.url.pathname.startsWith('/writing') ? 'current' : ''} href="/writing">
-				Writing
-			</a>
-		</li>
-	</ul>
+<!-- Minimal navigation - emphasis on content, not chrome -->
+<nav class="flex items-center gap-6" aria-label="Main navigation">
+	<a
+		href="/"
+		class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors duration-200 {page.url
+			.pathname === '/'
+			? 'text-[var(--color-accent)] font-medium'
+			: ''}"
+	>
+		Home
+	</a>
+	<a
+		href="/about"
+		class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors duration-200 {page.url
+			.pathname === '/about'
+			? 'text-[var(--color-accent)] font-medium'
+			: ''}"
+	>
+		About
+	</a>
+	<a
+		href="/writing"
+		class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors duration-200 {page.url
+			.pathname.startsWith('/writing')
+			? 'text-[var(--color-accent)] font-medium'
+			: ''}"
+	>
+		Writing
+	</a>
 </nav>
-
-<style>
-	ul,
-	li {
-		display: contents;
-	}
-
-	nav {
-		display: flex;
-		justify-content: flex-start;
-		gap: 1rem;
-		margin-top: 2rem;
-		margin-bottom: 2rem;
-	}
-
-	a {
-		text-decoration: none;
-		color: oklch(70% 0% 0);
-		text-align: center;
-	}
-
-	a:hover {
-		color: oklch(10% 0% 0);
-	}
-
-	.current {
-		color: oklch(10% 0% 0);
-	}
-</style>

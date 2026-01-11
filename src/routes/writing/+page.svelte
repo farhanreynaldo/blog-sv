@@ -7,45 +7,19 @@
 	<title>Writing</title>
 </svelte:head>
 
-<ul>
-	{#each data.posts as post}
-		<a href={post.path}>
-			<li>
-				<span>{post.meta.title}</span>
-				<span>{formatDate(post.meta.date)}</span>
-			</li>
+<ul class="space-y-2 md:space-y-0">
+	{#each data.posts as post (post.path)}
+		<a href={post.path} class="group block transition-colors duration-200">
+			<div class="flex flex-col md:flex-row md:justify-between">
+				<!-- Post title with accent on hover -->
+				<h2 class="group-hover:text-accent transition-colors duration-200">
+					{post.meta.title}
+				</h2>
+				<!-- Date in subtle text -->
+				<time datetime={post.meta.date} class="text-content-subtle">
+					{formatDate(post.meta.date)}
+				</time>
+			</div>
 		</a>
 	{/each}
 </ul>
-
-<style>
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
-	a {
-		text-decoration: none;
-		border-radius: 10px;
-
-		&:hover {
-			background-color: oklch(90% 0% 0);
-		}
-	}
-
-	li {
-		display: flex;
-		flex-direction: column;
-		color: oklch(70% 0% 0);
-		padding: 0.5rem;
-	}
-
-	span:first-child {
-		font-weight: bold;
-		color: oklch(10% 0% 0);
-	}
-</style>
