@@ -1,39 +1,46 @@
 import { json } from '@sveltejs/kit';
 
-// Dummy reading list - replace with real books later
 export const GET = async () => {
 	const readings = [
 		{
 			id: 1,
-			title: 'Thinking, Fast and Slow',
-			author: 'Daniel Kahneman',
-			date: '2025-01-05',
-			status: 'reading',
-			notes: 'Fascinating insights on cognitive biases'
+			title: 'Mistborn: The Final Empire',
+			author: 'Brandon Sanderson',
+			date: '2020-09-18',
+			status: 'Read',
+			rating: 5
 		},
 		{
 			id: 2,
-			title: 'The Design of Everyday Things',
-			author: 'Don Norman',
-			date: '2024-12-20',
-			status: 'finished',
-			notes: 'Essential reading for anyone designing interfaces'
+			title: 'The Well of Ascension',
+			author: 'Brandon Sanderson',
+			date: '2021-08-07',
+			status: 'Read',
+			rating: 5
 		},
 		{
 			id: 3,
-			title: 'Statistical Rethinking',
-			author: 'Richard McElreath',
-			date: '2024-11-15',
-			status: 'finished',
-			notes: 'Bayesian approach to statistical modeling'
+			title: 'The Hero of Ages',
+			author: 'Brandon Sanderson',
+			date: '2021-10-15',
+			status: 'Read',
+			rating: 5
 		},
 		{
 			id: 4,
-			title: 'Range',
-			author: 'David Epstein',
-			date: '2024-10-30',
-			status: 'finished',
-			notes: 'Why generalists triumph in a specialized world'
+			title: 'The Martian',
+			author: 'Andy Weir',
+			date: '2025-04-26',
+			status: 'Currently Reading',
+			rating: 4
+		},
+		{
+			id: 5,
+			title: 'Project Hail Mary',
+			author: 'Andy Weir',
+			date: '2024-05-10',
+			status: 'Read',
+			rating: 5
 		}
 	];
 

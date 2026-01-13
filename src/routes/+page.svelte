@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
 	import { formatDate } from '$lib/utils/DateFormatter';
+	import Star from '$lib/components/Star.svelte';
 </script>
 
 <svelte:head>
@@ -9,10 +10,12 @@
 
 <!-- Writing Section -->
 <section class="mb-6">
-	<a
-		href="/writing"
-		class="hover:text-accent text-content mb-2 font-bold transition-colors duration-200"
-		>Writing <span aria-hidden="true">→</span></a
+	<a href="/writing" class="group hover:text-accent mb-2 font-bold transition-colors duration-200"
+		>Writing<span
+			aria-hidden="true"
+			class="group-hover:text-accent-secondary text-content inline-block px-0.5 transition-transform duration-300 group-hover:translate-x-1"
+			>→</span
+		></a
 	>
 	<ul class="space-y-4 md:space-y-0">
 		{#each data.posts as post (post.path)}
@@ -35,11 +38,13 @@
 </section>
 
 <!-- Photos Section -->
-<section class="mb-8">
-	<a
-		href="/photos"
-		class="hover:text-accent text-content mb-2 font-bold transition-colors duration-200"
-		>Photos <span aria-hidden="true">→</span></a
+<section class="mb-6">
+	<a href="/photos" class="group hover:text-accent mb-2 font-bold transition-colors duration-200"
+		>Photos<span
+			aria-hidden="true"
+			class="group-hover:text-accent-secondary text-content inline-block px-0.5 transition-transform duration-300 group-hover:translate-x-1"
+			>→</span
+		></a
 	>
 	<ul class="space-y-4 md:space-y-0">
 		{#each data.photos as photo (photo.title)}
@@ -60,21 +65,36 @@
 </section>
 
 <!-- Readings Section -->
-<section class="mb-8">
-	<a
-		href="/readings"
-		class="hover:text-accent text-content mb-2 font-bold transition-colors duration-200"
-		>Reading <span aria-hidden="true">→</span></a
+<section class="mb-6">
+	<a href="/readings" class="group hover:text-accent mb-2 font-bold transition-colors duration-200"
+		>Readings<span
+			aria-hidden="true"
+			class="group-hover:text-accent-secondary text-content inline-block px-0.5 transition-transform duration-300 group-hover:translate-x-1"
+			>→</span
+		></a
 	>
 	<ul class="space-y-4 md:space-y-0">
 		{#each data.readings as reading (reading.title)}
 			<li>
-				<div class="flex flex-col md:flex-row md:justify-between">
-					<span class="text-content text-(length:--font-size-base)">
+				<div class="grid grid-cols-1 gap-1 md:grid-cols-8 md:items-center md:gap-4">
+					<span class="text-content truncate md:col-span-3" title={reading.title}>
 						{reading.title}
-						<span class="text-content-subtle">by {reading.author}</span>
 					</span>
-					<time datetime={reading.date} class="text-content-subtle">
+					<span class="text-content-subtle truncate md:col-span-2" title={reading.author}>
+						{reading.author}
+					</span>
+					<div
+						class="flex items-center gap-0 md:col-span-1"
+						aria-label="{reading.rating} out of 5 stars"
+					>
+						{#each Array(5) as _, i}
+							<Star filled={i < reading.rating} />
+						{/each}
+					</div>
+					<time
+						datetime={reading.date}
+						class="text-content-subtle md:col-span-2 md:justify-self-end"
+					>
 						{formatDate(reading.date)}
 					</time>
 				</div>

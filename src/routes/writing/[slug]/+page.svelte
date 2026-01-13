@@ -22,9 +22,13 @@
 <div class="mt-8">
 	<a
 		href="/writing"
-		class="text-content-muted hover:text-accent inline-flex items-center gap-2 transition-colors duration-200"
+		class="group text-content-muted hover:text-accent inline-flex items-center gap-1 transition-colors duration-200"
 	>
-		<span aria-hidden="true">←</span>
+		<span
+			aria-hidden="true"
+			class="group-hover:text-accent-secondary text-content inline-block transition-transform duration-300 group-hover:-translate-x-1"
+			>←</span
+		>
 		<span>Back to writing</span>
 	</a>
 </div>
