@@ -1,25 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  /* Typography - System font stack for zero loading time */
+  /* Typography - System font stack*/
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
-  --color-canvas: #fafaf9;
-  --color-surface: #ffffff;
-  --color-content: #1c1917;
-  --color-content-subtle: #a8a29e;
-  --color-content-muted: #57534e;
+  /* Base Colors - Warm cream */
+  --color-canvas: oklch(0.97 0.01 60);
+  --color-surface: oklch(1.0 0 0);
+  --color-content: oklch(0.25 0.02 60);
+  --color-content-subtle: oklch(0.55 0.03 50);
+  --color-content-muted: oklch(0.45 0.025 55);
 
-  /* Accent*/
-  --color-accent: #6b7c3f;
-  --color-accent-hover: #57662f;
-  --color-accent-subtle: #f1f4e8;
+  /* Accent - Crimson red */
+  --color-accent: oklch(0.55 0.20 25);
+  --color-accent-hover: oklch(0.45 0.22 25);
+  --color-accent-subtle: oklch(0.95 0.03 25);
 
-  /* Borders */
-  --color-border: #e7e5e4;
-  --color-divider: #e7e5e4;
-  --color-border-strong: #d6d3d1;
+  /* Secondary Accent - Sea blue */
+  --color-accent-secondary: oklch(0.60 0.15 230);
+  --color-accent-secondary-hover: oklch(0.50 0.17 230);
+  --color-accent-secondary-subtle: oklch(0.95 0.02 230);
+
+  /* Borders - Warm, subtle separation */
+  --color-border: oklch(0.90 0.01 60);
+  --color-divider: oklch(0.88 0.01 60);
+  --color-border-strong: oklch(0.80 0.015 60);
 
   /* Line heights*/
   --leading-tight: 1.25;
@@ -40,14 +46,14 @@ html {
 
 body {
   background-color: var(--color-canvas);
-  color: var(--color-text);
+  color: var(--color-content);
   font-size: var(--font-size-base);
   line-height: var(--leading-normal);
 }
 
 /* Prose styles for Markdown content */
 .prose {
-  color: var(--color-text);
+  color: var(--color-content);
   max-width: 65ch; /* Optimal reading line length */
 }
 
@@ -57,7 +63,7 @@ body {
   line-height: var(--leading-tight);
   margin-top: 1rem;
   margin-bottom: 0.75rem;
-  color: var(--color-text);
+  color: var(--color-content);
 }
 
 .prose h3 {
@@ -66,7 +72,7 @@ body {
   line-height: var(--leading-tight);
   margin-top: 1.5em;
   margin-bottom: 0.5em;
-  color: var(--color-text);
+  color: var(--color-content);
 }
 
 /* Paragraphs with generous spacing */
@@ -97,7 +103,7 @@ body {
   background-color: var(--color-accent-subtle);
   padding: 0.2em 0.4em;
   border-radius: var(--radius-sm);
-  color: var(--color-text);
+  color: var(--color-content);
 }
 
 /* Code blocks */
@@ -135,7 +141,7 @@ body {
 /* Emphasis */
 .prose strong {
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-content);
 }
 
 .prose em {
@@ -147,7 +153,7 @@ body {
   border-left: 3px solid var(--color-accent);
   padding-left: 1em;
   margin: 1.5em 0;
-  color: var(--color-text-muted);
+  color: var(--color-content-muted);
   font-style: italic;
 }
 
@@ -175,5 +181,5 @@ button {
 /* Selection color with your brand */
 ::selection {
   background-color: var(--color-accent-subtle);
-  color: var(--color-text);
+  color: var(--color-content);
 }
