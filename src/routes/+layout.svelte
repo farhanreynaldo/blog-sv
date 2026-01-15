@@ -8,7 +8,7 @@
 
 <div class="flex min-h-screen flex-col">
 	<!-- Two-column layout: sidebar navigation + main content -->
-	<div class="mx-auto w-full max-w-4xl flex-1 px-6 py-8 md:px-12 lg:px-16">
+	<div class="mx-auto w-full max-w-[960px] flex-1 px-6 py-8 md:px-12 lg:px-16">
 		<!-- Mobile: stacked, Desktop: two columns with fixed sidebar -->
 		<div class="grid gap-4 md:grid-cols-[180px_1fr]">
 			<!-- Left sidebar: Vertical navigation -->
@@ -28,6 +28,12 @@
 				<a href="/writing" class="hover:text-accent transition-colors duration-200">
 					Writing
 					{#if page.url.pathname == '/writing'}
+						<span aria-hidden="true">←</span>
+					{/if}
+				</a>
+				<a href="/readings" class="hover:text-accent transition-colors duration-200">
+					Readings
+					{#if page.url.pathname == '/readings'}
 						<span aria-hidden="true">←</span>
 					{/if}
 				</a>

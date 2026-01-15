@@ -15,3 +15,21 @@ export const fetchMarkdownPosts = async () => {
 
 	return allPosts;
 };
+
+export const fetchReadings = async () => {
+	const allReadingFiles = import.meta.glob('/src/routes/readings/*.{md,svx,svelte}');
+	const iterableReadingFiles = Object.entries(allReadingFiles);
+
+	const allReadings = await Promise.all(
+		iterableReadingFiles.map(async ([path, resolver]) => {
+			const { metadata } = await resolver();
+			const readingPath = path.slice(11).replace(/\.(md|svx|svelte)$/, '');
+			return {
+				meta: metadata,
+				path: readingPath
+			};
+		})
+	);
+
+	return allReadings;
+};
