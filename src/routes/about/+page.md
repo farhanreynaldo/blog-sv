@@ -6,13 +6,16 @@
 	<title>About</title>
 </svelte:head>
 
+<div class='mx-auto mb-6'>
+<enhanced:img src='$lib/assets/me.jpeg' alt="Self portrait of Aldo" class='md:h-96 object-cover' />
+</div>
+
 <div class="prose">
 
-Hi, I am Aldo! I'm currently working as a data science consultant at the [World Bank](https://www.worldbank.org/), where I work as part of a [Data Development Partnership](https://datapartnership.org/). I completed my Master's degree in Quantitative Methods in the Social Sciences at [Columbia University in the City of New York](https://www.columbia.edu/).
+Hi, I’m Aldo! I started this digital garden out of frustration with most social media’s single-format boxes. I wanted a place where a long-form essay could live alongside my photographs, where projects I developed could sit next to film and book reviews. This is that place: my own corner of the internet, where I control the narrative and the format. Feel free to wander through the various facets of my life, fellow stranger!
 
-Previously I worked as a senior data analyst at Tokopedia and as a data scientist at Delman Data Lab and Dattabot. I earned my bachelor's degree from Institut Teknologi Bandung majoring in bioengineering.
+If you’re curious about my professional side, head over to [weaklyinformative.com](https://weaklyinformative.com).
 
-My interests lie in Bayesian data analysis, experimentation, and causal inference. Here's my latest [resume](https://weaklyinformative.com/pdf/cv.pdf).
 </div>
 
 <Footer />
