@@ -8,7 +8,7 @@
 
 <div class="flex min-h-screen flex-col">
 	<!-- Two-column layout: sidebar navigation + main content -->
-	<div class="mx-auto w-full max-w-[960px] flex-1 px-6 py-8 md:px-12 lg:px-16">
+	<div class="mx-auto w-full max-w-240 flex-1 px-6 py-8 md:px-12 lg:px-16">
 		<!-- Mobile: stacked, Desktop: two columns with fixed sidebar -->
 		<div class="grid gap-4 md:grid-cols-[180px_1fr]">
 			<!-- Left sidebar: Vertical navigation -->
