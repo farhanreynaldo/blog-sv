@@ -37,6 +37,12 @@
 						<span aria-hidden="true">←</span>
 					{/if}
 				</a>
+				<a href="/photos" class="hover:text-accent transition-colors duration-200">
+					Photos
+					{#if page.url.pathname == '/photos'}
+						<span aria-hidden="true">←</span>
+					{/if}
+				</a>
 			</nav>
 			<!-- Right content: Main page content -->
 			<main class="min-w-0">

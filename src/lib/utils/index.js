@@ -33,3 +33,22 @@ export const fetchReadings = async () => {
 
 	return allReadings;
 };
+
+export const fetchPhotos = async () => {
+	const allPhotoFiles = import.meta.glob('/src/routes/photos/*.{md,svx,svelte}');
+
+	const iterablePhotoFiles = Object.entries(allPhotoFiles);
+
+	const allPhotos = await Promise.all(
+		iterablePhotoFiles.map(async ([path, resolver]) => {
+			const { metadata } = await resolver();
+			const photoPath = path.slice(11).replace(/\.(md|svx|svelte)$/, '');
+			return {
+				meta: metadata,
+				path: photoPath
+			};
+		})
+	);
+
+	return allPhotos;
+};

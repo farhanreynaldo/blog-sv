@@ -13,8 +13,8 @@ export const load = async ({ fetch }) => {
 	]);
 
 	return {
-		posts: posts.slice(0, 5), // Show latest 5 posts
-		photos: photos.slice(0, 3), // Show latest 3 photos
+		posts: posts.slice(0, 4), // Show latest 4 posts
+		photos: photos.slice(0, 4), // Show latest 4 photos
 		readings: readings.slice(0, 4) // Show latest 4 readings
 	};
 };

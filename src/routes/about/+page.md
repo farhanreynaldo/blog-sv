@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div class='mx-auto mb-6'>
-<enhanced:img src='$lib/assets/me.jpeg' alt="Self portrait of Aldo" class='md:h-96 object-cover' />
+<enhanced:img src='$lib/assets/me.jpeg' alt="Self portrait of Aldo" class='md:h-96 object-cover rounded-md shadow-md' />
 </div>
 
 <div class="prose">

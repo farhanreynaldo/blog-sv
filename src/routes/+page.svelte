@@ -47,22 +47,13 @@
 			>→</span
 		></a
 	>
-	<ul class="space-y-4 md:space-y-0">
-		{#each data.photos as photo (photo.title)}
-			<li>
-				<div class="group">
-					<div class="flex flex-col md:flex-row md:justify-between">
-						<span class="text-content">
-							{photo.title}
-						</span>
-						<time datetime={photo.date} class="text-content-subtle">
-							{formatDate(photo.date)}
-						</time>
-					</div>
-				</div>
-			</li>
+	<div class="mt-2 flex flex-row gap-2 space-y-4 md:space-y-0">
+		{#each data.photos as photo (photo.path)}
+			<a href={photo.path}>
+				<img src={photo.meta.image} alt={photo.meta.alt} class="h-24 w-24 object-cover" />
+			</a>
 		{/each}
-	</ul>
+	</div>
 </section>
 
 <!-- Readings Section -->

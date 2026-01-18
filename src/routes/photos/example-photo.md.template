@@ -1,0 +1,32 @@
+---
+title: 'Golden Gate Bridge'
+date: '2024-03-15'
+description: 'Early morning fog rolling over the iconic bridge'
+image: '$lib/assets/photos/golden-gate.jpg'
+alt: 'Golden Gate Bridge shrouded in morning fog with orange cables visible above the clouds'
+camera: 'Sony A7III'
+lens: '24-70mm f/2.8'
+settings: 'ISO 100, f/8, 1/250s'
+location: 'San Francisco, CA'
+---
+
+<!-- Optional: You can add additional content here in Markdown -->
+<!-- This template file shows all available metadata fields -->
+<!-- To use: -->
+<!-- 1. Add your photo to src/lib/assets/photos/ -->
+<!-- 2. Copy this template and rename it (e.g., golden-gate.md) -->
+<!-- 3. Update the frontmatter with your photo's details -->
+<!-- 4. The photo will automatically appear in the gallery -->
+
+<!-- Required fields: -->
+<!-- - title: Photo title -->
+<!-- - date: Date in YYYY-MM-DD format -->
+<!-- - image: Path to the photo file (always start with $lib/assets/photos/) -->
+<!-- - alt: Descriptive alt text for accessibility -->
+
+<!-- Optional fields: -->
+<!-- - description: Brief description of the photo -->
+<!-- - camera: Camera model used -->
+<!-- - lens: Lens used -->
+<!-- - settings: Camera settings (ISO, aperture, shutter speed) -->
+<!-- - location: Where the photo was taken -->
