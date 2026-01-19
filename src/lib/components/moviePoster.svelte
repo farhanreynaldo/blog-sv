@@ -1,7 +1,7 @@
 <script>
 	let { data } = $props();
 
-	import Star from '$lib/components/Star.svelte';
+	import Rating from '$lib/components/Rating.svelte';
 </script>
 
 <div class="border-border-strong m-auto mb-4 border-b p-4 md:w-2/3">
@@ -9,7 +9,7 @@
 	<div>
 		<span class="text-content font-sans text-3xl leading-tight font-semibold">
 			{data.title}
-		</span> <span class="">{data.year}</span>
+		</span> <span class="text-sm">{data.year}</span>
 	</div>
 	<div class="mt-1 flex flex-col gap-1 text-sm">
 		<div>
@@ -22,11 +22,7 @@
 		</div>
 		<div class="flex items-center gap-2">
 			<span class="text-content-subtle text-xs">Rating</span>
-			<span class="flex items-center gap-0" aria-label="{data.rating} out of 5 stars">
-				{#each Array(5) as _, i}
-					<Star filled={i < data.rating} />
-				{/each}
-			</span>
+			<Rating rating={data.rating} />
 		</div>
 	</div>
 </div>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
 	import { formatDate } from '$lib/utils/DateFormatter';
-	import Star from '$lib/components/Star.svelte';
+	import Rating from '$lib/components/Rating.svelte';
 </script>
 
 <svelte:head>
@@ -82,11 +82,7 @@
 						<time datetime={reading.meta.date} class="text-content-subtle whitespace-nowrap"
 							>{formatDate(reading.meta.date)}</time
 						>
-						<div class="flex items-center gap-0" aria-label="{reading.meta.rating} out of 5 stars">
-							{#each Array(5) as _, i}
-								<Star filled={i < reading.meta.rating} />
-							{/each}
-						</div>
+						<Rating rating={reading.meta.rating} />
 					</div>
 				</a>
 			</li>
@@ -120,11 +116,7 @@
 						<time datetime={movie.meta.date} class="text-content-subtle whitespace-nowrap"
 							>{formatDate(movie.meta.date)}</time
 						>
-						<div class="flex items-center gap-0" aria-label="{movie.meta.rating} out of 5 stars">
-							{#each Array(5) as _, i}
-								<Star filled={i < movie.meta.rating} />
-							{/each}
-						</div>
+						<Rating rating={movie.meta.rating} />
 					</div>
 				</a>
 			</li>

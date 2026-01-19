@@ -2,8 +2,6 @@
 	let { data } = $props();
 
 	import MoviePoster from '$lib/components/moviePoster.svelte';
-	import { formatDate } from '$lib/utils/DateFormatter';
-	import Star from '$lib/components/Star.svelte';
 </script>
 
 <header>

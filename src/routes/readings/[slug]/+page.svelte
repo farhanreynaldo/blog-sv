@@ -2,7 +2,7 @@
 	let { data } = $props();
 
 	import { formatDate } from '$lib/utils/DateFormatter';
-	import Star from '$lib/components/Star.svelte';
+	import Rating from '$lib/components/Rating.svelte';
 </script>
 
 <!-- Book header with clear hierarchy -->
@@ -12,11 +12,7 @@
 	</h1>
 	<p class="text-content-subtle">by {data.author}</p>
 	<div class="mt-2 flex items-center gap-2">
-		<div class="flex items-center gap-0" aria-label="{data.rating} out of 5 stars">
-			{#each Array(5) as _, i}
-				<Star filled={i < data.rating} />
-			{/each}
-		</div>
+		<Rating rating={data.rating} />
 		<span class="text-content-subtle">·</span>
 		<time datetime={data.date} class="text-content-subtle text-sm">
 			{formatDate(data.date)}
