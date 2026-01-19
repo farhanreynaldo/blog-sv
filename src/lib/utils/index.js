@@ -52,3 +52,21 @@ export const fetchPhotos = async () => {
 
 	return allPhotos;
 };
+
+export const fetchMovies = async () => {
+	const allMovieFiles = import.meta.glob('/src/routes/watching/*.{md,svx,svelte}');
+	const iterableMovieFiles = Object.entries(allMovieFiles);
+
+	const allMovies = await Promise.all(
+		iterableMovieFiles.map(async ([path, resolver]) => {
+			const { metadata } = await resolver();
+			const moviePath = path.slice(11).replace(/\.(md|svx|svelte)$/, '');
+			return {
+				meta: metadata,
+				path: moviePath
+			};
+		})
+	);
+
+	return allMovies;
+};

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "WebSearch",
+      "Bash(npm install:*)"
+    ]
+  },
+  "outputStyle": "default"
+}

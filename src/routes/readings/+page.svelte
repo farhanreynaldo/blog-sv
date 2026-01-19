@@ -25,7 +25,10 @@
 					<time datetime={reading.meta.date} class="text-content-subtle whitespace-nowrap"
 						>{formatDate(reading.meta.date)}</time
 					>
-					<div class="flex items-center gap-0" aria-label="{reading.meta.rating} out of 5 stars">
+					<div
+						class="mt-1 flex items-center gap-0"
+						aria-label="{reading.meta.rating} out of 5 stars"
+					>
 						{#each Array(5) as _, i}
 							<Star filled={i < reading.meta.rating} />
 						{/each}

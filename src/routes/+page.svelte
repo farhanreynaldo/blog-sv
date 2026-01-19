@@ -93,3 +93,41 @@
 		{/each}
 	</ul>
 </section>
+
+<!-- Movies Section -->
+<section class="mb-6">
+	<a href="/movies" class="group hover:text-accent mb-2 font-bold transition-colors duration-200"
+		>Movies<span
+			aria-hidden="true"
+			class="group-hover:text-accent-secondary text-content inline-block px-0.5 transition-transform duration-300 group-hover:translate-x-1"
+			>→</span
+		></a
+	>
+	<ul class="space-y-4 md:space-y-0">
+		{#each data.movies as movie (movie.meta.title)}
+			<li>
+				<a href={movie.path} class="group block">
+					<div
+						class="grid grid-cols-1 gap-x-4 md:grid-cols-[3.5fr_2.5fr_2.5fr_1.5fr] md:items-center"
+					>
+						<span
+							class="text-content group-hover:text-accent truncate transition-colors duration-200"
+							title={movie.meta.title}>{movie.meta.title}</span
+						>
+						<span class="text-content-subtle truncate" title={movie.meta.author}
+							>{movie.meta.creator}</span
+						>
+						<time datetime={movie.meta.date} class="text-content-subtle whitespace-nowrap"
+							>{formatDate(movie.meta.date)}</time
+						>
+						<div class="flex items-center gap-0" aria-label="{movie.meta.rating} out of 5 stars">
+							{#each Array(5) as _, i}
+								<Star filled={i < movie.meta.rating} />
+							{/each}
+						</div>
+					</div>
+				</a>
+			</li>
+		{/each}
+	</ul>
+</section>

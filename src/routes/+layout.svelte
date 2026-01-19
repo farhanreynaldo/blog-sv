@@ -43,6 +43,12 @@
 						<span aria-hidden="true">←</span>
 					{/if}
 				</a>
+				<a href="/watching" class="hover:text-accent transition-colors duration-200">
+					Watching
+					{#if page.url.pathname.startsWith('/watching')}
+						<span aria-hidden="true">←</span>
+					{/if}
+				</a>
 			</nav>
 			<!-- Right content: Main page content -->
 			<main class="min-w-0">
