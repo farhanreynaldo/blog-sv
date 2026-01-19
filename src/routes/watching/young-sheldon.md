@@ -1,14 +1,14 @@
 ---
-title: Better Call Saul
-date: 2026-01-10
-year: 2015
-creator: Vince Gilligan
+title: Young Sheldon
+date: 2025-06-30
+year: 2017
+creator: Chuck Lorre
 starring: 
-    - "Bob Odenkirk"
-    - "Jonathan Banks"
-    - "Rhea Seehorn"
+    - Iain Armitage
+    - Zoe Perry
+    - Lance Barber
 rating: 5
-poster: '/posters/better-call-saul.jpg'
+poster: '/posters/young-sheldon.webp'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie mattis nunc vel convallis. Integer ultrices non felis sed sollicitudin. Donec ultricies ex pulvinar nunc interdum interdum. Etiam ultricies arcu ex, at sagittis dolor semper id. Morbi pellentesque turpis eget sapien molestie egestas. Quisque pellentesque magna at laoreet pharetra. Donec ut justo finibus, semper libero sed, varius mauris. Mauris cursus, neque at fermentum placerat, felis lectus interdum enim, nec tincidunt dui eros sodales urna.

@@ -1,14 +1,14 @@
 ---
-title: Better Call Saul
-date: 2026-01-10
-year: 2015
-creator: Vince Gilligan
+title: The Pitt
+date: 2026-01-14
+year: 2025
+creator: R. Scott Gemmill
 starring: 
-    - "Bob Odenkirk"
-    - "Jonathan Banks"
-    - "Rhea Seehorn"
-rating: 5
-poster: '/posters/better-call-saul.jpg'
+    - Noah Wyle
+    - Patrick Ball
+    - Katherine LaNasa
+rating: 4
+poster: '/posters/the-pitt.webp'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie mattis nunc vel convallis. Integer ultrices non felis sed sollicitudin. Donec ultricies ex pulvinar nunc interdum interdum. Etiam ultricies arcu ex, at sagittis dolor semper id. Morbi pellentesque turpis eget sapien molestie egestas. Quisque pellentesque magna at laoreet pharetra. Donec ut justo finibus, semper libero sed, varius mauris. Mauris cursus, neque at fermentum placerat, felis lectus interdum enim, nec tincidunt dui eros sodales urna.
