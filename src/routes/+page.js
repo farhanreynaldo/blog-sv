@@ -1,23 +1,23 @@
 export const load = async ({ fetch }) => {
 	// Fetch all three data sources in parallel
-	const [postsRes, photosRes, readingsRes, moviesRes] = await Promise.all([
+	const [postsRes, photosRes, booksRes, moviesRes] = await Promise.all([
 		fetch('/api/posts'),
 		fetch('/api/photos'),
-		fetch('/api/readings'),
+		fetch('/api/books'),
 		fetch('/api/movies')
 	]);
 
-	const [posts, photos, readings, movies] = await Promise.all([
+	const [posts, photos, books, movies] = await Promise.all([
 		postsRes.json(),
 		photosRes.json(),
-		readingsRes.json(),
+		booksRes.json(),
 		moviesRes.json()
 	]);
 
 	return {
 		posts: posts.slice(0, 4),
 		photos: photos.slice(0, 4),
-		readings: readings.slice(0, 4),
+		books: books.slice(0, 4),
 		movies: movies.slice(0, 4)
 	};
 };

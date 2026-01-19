@@ -16,22 +16,22 @@ export const fetchMarkdownPosts = async () => {
 	return allPosts;
 };
 
-export const fetchReadings = async () => {
-	const allReadingFiles = import.meta.glob('/src/routes/readings/*.{md,svx,svelte}');
-	const iterableReadingFiles = Object.entries(allReadingFiles);
+export const fetchbooks = async () => {
+	const allBookFiles = import.meta.glob('/src/routes/reading/*.{md,svx,svelte}');
+	const iterableBookFiles = Object.entries(allBookFiles);
 
-	const allReadings = await Promise.all(
-		iterableReadingFiles.map(async ([path, resolver]) => {
+	const allbooks = await Promise.all(
+		iterableBookFiles.map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
-			const readingPath = path.slice(11).replace(/\.(md|svx|svelte)$/, '');
+			const bookPath = path.slice(11).replace(/\.(md|svx|svelte)$/, '');
 			return {
 				meta: metadata,
-				path: readingPath
+				path: bookPath
 			};
 		})
 	);
 
-	return allReadings;
+	return allbooks;
 };
 
 export const fetchPhotos = async () => {

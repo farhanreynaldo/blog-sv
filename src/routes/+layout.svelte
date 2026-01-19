@@ -31,9 +31,9 @@
 						<span aria-hidden="true">←</span>
 					{/if}
 				</a>
-				<a href="/readings" class="hover:text-accent transition-colors duration-200">
-					Readings
-					{#if page.url.pathname == '/readings'}
+				<a href="/reading" class="hover:text-accent transition-colors duration-200">
+					Reading
+					{#if page.url.pathname == '/reading'}
 						<span aria-hidden="true">←</span>
 					{/if}
 				</a>

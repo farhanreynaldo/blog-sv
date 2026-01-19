@@ -56,33 +56,33 @@
 	</div>
 </section>
 
-<!-- Readings Section -->
+<!-- reading Section -->
 <section class="mb-6">
-	<a href="/readings" class="group hover:text-accent mb-2 font-bold transition-colors duration-200"
-		>Readings<span
+	<a href="/reading" class="group hover:text-accent mb-2 font-bold transition-colors duration-200"
+		>Reading<span
 			aria-hidden="true"
 			class="group-hover:text-accent-secondary text-content inline-block px-0.5 transition-transform duration-300 group-hover:translate-x-1"
 			>→</span
 		></a
 	>
 	<ul class="space-y-4 md:space-y-0">
-		{#each data.readings as reading (reading.meta.title)}
+		{#each data.books as book (book.meta.title)}
 			<li>
-				<a href={reading.path} class="group block">
+				<a href={book.path} class="group block">
 					<div
 						class="grid grid-cols-1 gap-x-4 md:grid-cols-[3.5fr_2.5fr_2.5fr_1.5fr] md:items-center"
 					>
 						<span
 							class="text-content group-hover:text-accent truncate transition-colors duration-200"
-							title={reading.meta.title}>{reading.meta.title}</span
+							title={book.meta.title}>{book.meta.title}</span
 						>
-						<span class="text-content-subtle truncate" title={reading.meta.author}
-							>{reading.meta.author}</span
+						<span class="text-content-subtle truncate" title={book.meta.author}
+							>{book.meta.author}</span
 						>
-						<time datetime={reading.meta.date} class="text-content-subtle whitespace-nowrap"
-							>{formatDate(reading.meta.date)}</time
+						<time datetime={book.meta.date} class="text-content-subtle whitespace-nowrap"
+							>{formatDate(book.meta.date)}</time
 						>
-						<Rating rating={reading.meta.rating} />
+						<Rating rating={book.meta.rating} />
 					</div>
 				</a>
 			</li>

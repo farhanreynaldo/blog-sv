@@ -27,7 +27,7 @@
 
 <div class="mt-8">
 	<a
-		href="/readings"
+		href="/reading"
 		class="group text-content-muted hover:text-accent inline-flex items-center gap-1 transition-colors duration-200"
 	>
 		<span
@@ -35,6 +35,6 @@
 			class="group-hover:text-accent-secondary text-content inline-block transition-transform duration-300 group-hover:-translate-x-1"
 			>←</span
 		>
-		<span>Back to readings</span>
+		<span>Back to reading</span>
 	</a>
 </div>

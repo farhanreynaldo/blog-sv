@@ -5,27 +5,27 @@
 </script>
 
 <svelte:head>
-	<title>Readings</title>
+	<title>Reading</title>
 </svelte:head>
 
 <ul class="space-y-4 md:space-y-0">
-	{#each data.posts as reading (reading.path)}
+	{#each data.books as book (book.path)}
 		<li>
-			<a href={reading.path} class="group block">
+			<a href={book.path} class="group block">
 				<div
 					class="grid grid-cols-1 gap-x-4 md:grid-cols-[3.5fr_2.5fr_2.5fr_1.5fr] md:items-center"
 				>
 					<span
 						class="text-content group-hover:text-accent truncate transition-colors duration-200"
-						title={reading.meta.title}>{reading.meta.title}</span
+						title={book.meta.title}>{book.meta.title}</span
 					>
-					<span class="text-content-subtle truncate" title={reading.meta.author}
-						>{reading.meta.author}</span
+					<span class="text-content-subtle truncate" title={book.meta.author}
+						>{book.meta.author}</span
 					>
-					<time datetime={reading.meta.date} class="text-content-subtle whitespace-nowrap"
-						>{formatDate(reading.meta.date)}</time
+					<time datetime={book.meta.date} class="text-content-subtle whitespace-nowrap"
+						>{formatDate(book.meta.date)}</time
 					>
-					<Rating rating={reading.meta.rating} />
+					<Rating rating={book.meta.rating} />
 				</div>
 			</a>
 		</li>
