@@ -9,7 +9,7 @@
 	<h1 class="text-content text-lg leading-tight font-semibold">
 		{data.title}
 	</h1>
-	<img src={data.image} alt={data.alt} class="my-4 rounded-md shadow-md" />
+	<img src={data.image} alt={data.alt} class="my-4 shadow-md" />
 	<time datetime={data.date} class="text-content-subtle text-sm">
 		{formatDate(data.date)}
 	</time>
