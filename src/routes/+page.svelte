@@ -90,10 +90,10 @@
 	</ul>
 </section>
 
-<!-- Movies Section -->
+<!-- Watching Section -->
 <section class="mb-6">
-	<a href="/movies" class="group hover:text-accent mb-2 font-bold transition-colors duration-200"
-		>Movies<span
+	<a href="/watching" class="group hover:text-accent mb-2 font-bold transition-colors duration-200"
+		>Watching<span
 			aria-hidden="true"
 			class="group-hover:text-accent-secondary text-content inline-block px-0.5 transition-transform duration-300 group-hover:translate-x-1"
 			>→</span
