@@ -5,7 +5,7 @@ export const GET = async () => {
 	const allPosts = await fetchMarkdownPosts();
 
 	const sortedPosts = allPosts
-		.filter((post) => post.meta && post.meta.date)
+		.filter((post) => post.meta && post.meta.date && !post.meta.draft)
 		.sort((a, b) => {
 			return new Date(b.meta.date) - new Date(a.meta.date);
 		});

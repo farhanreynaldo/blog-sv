@@ -1,7 +1,8 @@
 <script module>
 	export const metadata = {
 		title: 'Interactive Svelte Example',
-		date: '2025-12-24'
+		date: '2025-12-24',
+		draft: true
 	};
 </script>
 
