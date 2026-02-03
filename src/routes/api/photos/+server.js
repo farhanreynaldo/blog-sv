@@ -5,7 +5,7 @@ export const GET = async () => {
 	const allPhotos = await fetchPhotos();
 
 	const sortedPhotos = allPhotos
-		.filter((photo) => photo.meta && photo.meta.date)
+		.filter((photo) => photo.meta && photo.meta.date && !photo.meta.draft)
 		.sort((a, b) => {
 			return new Date(b.meta.date) - new Date(a.meta.date);
 		});
