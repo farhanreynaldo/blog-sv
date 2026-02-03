@@ -11,6 +11,10 @@ rating: 5
 poster: '/posters/better-call-saul.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie mattis nunc vel convallis. Integer ultrices non felis sed sollicitudin. Donec ultricies ex pulvinar nunc interdum interdum. Etiam ultricies arcu ex, at sagittis dolor semper id. Morbi pellentesque turpis eget sapien molestie egestas. Quisque pellentesque magna at laoreet pharetra. Donec ut justo finibus, semper libero sed, varius mauris. Mauris cursus, neque at fermentum placerat, felis lectus interdum enim, nec tincidunt dui eros sodales urna.
+I'll admit, I was skeptical about this Breaking Bad spin-off. Even with the overwhelming praise, it was hard to imagine how a series centered on Breaking Bad's lawyer could be anything but a boring legal drama. This year, I finally decided to give the pilot a chance, and I'm incredibly grateful to have been proven wrong. 
 
-Vivamus condimentum augue vitae dui faucibus, id molestie nunc fermentum. Morbi ornare egestas leo dignissim suscipit. Nam nulla ex, ornare et mauris quis, pretium pharetra dolor. Curabitur ut risus sit amet sapien dignissim consequat quis eget turpis. Praesent aliquet tempor nisl, nec varius ex fermentum non. Maecenas vitae molestie tellus. Mauris feugiat augue vel dui vestibulum volutpat. Aenean semper tristique lacus, quis blandit nisl. Ut ultrices sagittis ex ac dignissim. Mauris tristique, tellus in facilisis laoreet, ligula est mollis nisl, in commodo ipsum elit at elit. Donec viverra a quam a euismod. Morbi tristique eget nisl congue varius.
+If anything that hooked me into binge-watching the whole series, it was the cinematography. Vince Gilligan and his team use unique angles, Inanimate object POVs, and pleasing compositions to deliver a meaningful subtext that dialogue alone doesn't capture. Every frame indeed feels intentional. 
+
+And don't get me started on the story. The way Jimmy’s relationship with Chuck defines his character is both beautiful and tragic. While Chuck’s demise is the catalyst that shatters Jimmy’s spirit, the true "final blow" is his breakup with Kim Wexler. That loss is what ultimately completes his transformation, giving way to the full-blown Saul Goodman persona.
+
+Despite being a spin-off of the best TV series of all time, it doesn't live in the shadow of the original. It didn't just meet the expectations set by its predecessor; it redefined what a spin-off is capable of achieving. 
