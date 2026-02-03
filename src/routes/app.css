@@ -77,8 +77,8 @@ body {
 
 /* Paragraphs with generous spacing */
 .prose p {
-  margin-bottom: 1.5em;
-  line-height: var(--leading-relaxed);
+  margin-bottom: 1rem;
+  line-height: var(--leading-normal);
   font-size: var(--font-size-lg);
 }
 
@@ -135,7 +135,7 @@ body {
 
 .prose li {
   margin: 0.5em 0;
-  line-height: var(--leading-relaxed);
+  line-height: var(--leading-normal);
 }
 
 /* Emphasis */
