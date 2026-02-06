@@ -5,7 +5,15 @@
 </script>
 
 <div class="border-border-strong m-auto mb-4 border-b p-4 md:w-2/3">
-	<img src={data.poster} alt={`Poster of ${data.title}`} class="m-auto object-cover object-top" />
+	<img
+		src={data.poster}
+		alt={`Poster of ${data.title}`}
+		class="m-auto object-cover object-top"
+		loading="lazy"
+		decoding="async"
+		width="600"
+		height="900"
+	/>
 	<div>
 		<span class="text-content font-sans text-3xl leading-tight font-semibold">
 			{data.title}
