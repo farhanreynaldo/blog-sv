@@ -2,7 +2,7 @@
 title: 'Reflection'
 date: '2026-01-22'
 description: 'A reflection of Rafida from metal tabletop surface'
-image: '/photos/reflection.jpeg'
+image: 'reflection.jpeg'
 alt: 'A reflection of Rafida from metal tabletop surface'
 camera: 'Fujifilm X-T30 II'
 lens: '15.0-45.0 mm f/3.5-5.6'

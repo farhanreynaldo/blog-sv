@@ -34,6 +34,21 @@ export const fetchbooks = async () => {
 	return allbooks;
 };
 
+const photoAssets = import.meta.glob('/src/lib/assets/photos/*', {
+	eager: true,
+	query: { enhanced: '' },
+	import: 'default'
+});
+
+/**
+ * @param {string} filename
+ * @returns {import('@sveltejs/enhanced-img').Picture | undefined}
+ */
+export const resolvePhotoAsset = (filename) => {
+	const entry = Object.entries(photoAssets).find(([path]) => path.endsWith(`/${filename}`));
+	return entry ? /** @type {import('@sveltejs/enhanced-img').Picture} */ (entry[1]) : undefined;
+};
+
 export const fetchPhotos = async () => {
 	const allPhotoFiles = import.meta.glob('/src/routes/photos/*.{md,svx,svelte}');
 
@@ -44,13 +59,28 @@ export const fetchPhotos = async () => {
 			const { metadata } = await resolver();
 			const photoPath = path.slice(11).replace(/\.(md|svx|svelte)$/, '');
 			return {
-				meta: metadata,
+				meta: metadata && { ...metadata, image: resolvePhotoAsset(metadata.image) },
 				path: photoPath
 			};
 		})
 	);
 
 	return allPhotos;
+};
+
+const posterAssets = import.meta.glob('/src/lib/assets/posters/*', {
+	eager: true,
+	query: { enhanced: '' },
+	import: 'default'
+});
+
+/**
+ * @param {string} filename
+ * @returns {import('@sveltejs/enhanced-img').Picture | undefined}
+ */
+export const resolvePosterAsset = (filename) => {
+	const entry = Object.entries(posterAssets).find(([path]) => path.endsWith(`/${filename}`));
+	return entry ? /** @type {import('@sveltejs/enhanced-img').Picture} */ (entry[1]) : undefined;
 };
 
 export const fetchMovies = async () => {

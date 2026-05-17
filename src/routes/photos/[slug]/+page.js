@@ -1,3 +1,5 @@
+import { resolvePhotoAsset } from '$lib/utils';
+
 export async function load({ params }) {
 	const photos = import.meta.glob('../*.{md,svx,svelte}');
 	const photoPath = Object.keys(photos).find((path) => path.includes(`/${params.slug}`));
@@ -8,7 +10,7 @@ export async function load({ params }) {
 		content,
 		title,
 		date,
-		image,
+		image: resolvePhotoAsset(image),
 		alt,
 		camera,
 		lens,

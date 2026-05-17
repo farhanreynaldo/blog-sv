@@ -8,7 +8,7 @@ starring:
     - David Harbour
     - Finn Wolfhard
 rating: 4
-poster: '/posters/stranger-things.webp'
+poster: 'stranger-things.webp'
 draft: true
 ---
 

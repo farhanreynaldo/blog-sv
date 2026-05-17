@@ -8,7 +8,7 @@ starring:
     - Lisa Edelstein
     - Omar Epps
 rating: 4
-poster: '/posters/house.webp'
+poster: 'house.webp'
 draft: true
 ---
 

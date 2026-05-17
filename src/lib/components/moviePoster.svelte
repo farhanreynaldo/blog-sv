@@ -5,14 +5,13 @@
 </script>
 
 <div class="border-border-strong m-auto mb-4 border-b p-4 md:w-2/3">
-	<img
+	<enhanced:img
 		src={data.poster}
 		alt={`Poster of ${data.title}`}
 		class="m-auto object-cover object-top"
-		loading="lazy"
+		fetchpriority="high"
 		decoding="async"
-		width="600"
-		height="900"
+		sizes="(min-width: 768px) 600px, 100vw"
 	/>
 	<div>
 		<span class="text-content font-sans text-3xl leading-tight font-semibold">

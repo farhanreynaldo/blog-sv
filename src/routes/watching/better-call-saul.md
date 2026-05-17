@@ -8,7 +8,7 @@ starring:
     - "Jonathan Banks"
     - "Rhea Seehorn"
 rating: 5
-poster: '/posters/better-call-saul.jpg'
+poster: 'better-call-saul.jpg'
 ---
 
 I'll admit, I was skeptical about this Breaking Bad spin-off. Even with the overwhelming praise, it was hard to imagine how a series centered on Breaking Bad's lawyer could be anything but a boring legal drama. This year, I finally decided to give the pilot a chance, and I'm incredibly grateful to have been proven wrong. 

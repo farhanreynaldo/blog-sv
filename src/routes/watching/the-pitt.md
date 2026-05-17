@@ -8,7 +8,7 @@ starring:
     - Patrick Ball
     - Katherine LaNasa
 rating: 4
-poster: '/posters/the-pitt.webp'
+poster: 'the-pitt.webp'
 draft: true
 ---
 

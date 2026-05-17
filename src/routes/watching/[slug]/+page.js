@@ -1,3 +1,5 @@
+import { resolvePosterAsset } from '$lib/utils';
+
 export async function load({ params }) {
 	const movies = import.meta.glob('../*.{md,svx,svelte}');
 	const moviePath = Object.keys(movies).find((path) => path.includes(`/${params.slug}`));
@@ -12,6 +14,6 @@ export async function load({ params }) {
 		creator,
 		starring,
 		rating,
-		poster
+		poster: resolvePosterAsset(poster)
 	};
 }

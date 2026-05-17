@@ -50,14 +50,13 @@
 	<div class="mt-2 flex flex-row gap-2 space-y-4 md:space-y-0">
 		{#each data.photos as photo (photo.path)}
 			<a href={photo.path}>
-				<img
+				<enhanced:img
 					src={photo.meta.image}
 					alt={photo.meta.alt}
 					class="h-24 w-24 object-cover"
 					loading="lazy"
 					decoding="async"
-					width="96"
-					height="96"
+					sizes="96px"
 				/>
 			</a>
 		{/each}

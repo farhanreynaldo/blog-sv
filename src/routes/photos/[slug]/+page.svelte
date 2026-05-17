@@ -6,14 +6,13 @@
 
 <!-- Photos header with clear hierarchy -->
 <header class="mb-6">
-	<img
+	<enhanced:img
 		src={data.image}
 		alt={data.alt}
 		class="my-4 shadow-md"
-		loading="lazy"
+		fetchpriority="high"
 		decoding="async"
-		width="1200"
-		height="800"
+		sizes="(min-width: 768px) 768px, 100vw"
 	/>
 	<div class="mt-4 grid grid-cols-1 md:grid-cols-2">
 		<div>

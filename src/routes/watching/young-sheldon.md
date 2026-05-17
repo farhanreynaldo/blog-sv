@@ -8,7 +8,7 @@ starring:
     - Zoe Perry
     - Lance Barber
 rating: 5
-poster: '/posters/young-sheldon.webp'
+poster: 'young-sheldon.webp'
 draft: true
 ---
 
